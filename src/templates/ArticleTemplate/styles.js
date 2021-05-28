@@ -23,12 +23,12 @@ export const ArticleTitleContentWrapper = styled.div`
   text-decoration: none;
   text-align: left;
   border: 1px solid #00de51;
-  border-radius: 10px;
   background: rgba(50, 50, 50, 1);
 `;
 
 export const Title = styled.div`
-  margin-bottom: 5px;
+  margin-top: 15px;
+  margin-bottom: 15px;
   display: inline-block;
   text-transform: uppercase;
   font-size: 40px;
@@ -49,7 +49,14 @@ export const ArticleContentWrapper = styled.div`
     font-size: 25px;
     color: #00de51;
     margin: 20px;
-    text-align: left;
+    display: flex;
+    justify-content: center;
+  }
+  > h3 {
+    color: white;
+    border-bottom: 2px solid #00de51;
+    padding-bottom: 15px;
+    text-transform: uppercase;
   }
 `;
 
@@ -57,8 +64,8 @@ export const AuthorWrapper = styled.div`
   width: 100%;
   text-align: right;
   color: white;
-  font-style: italic;
+  text-transform: uppercase;
   justify-content: flex-end;
-  padding-right: 20px;
+  padding-right: 30px;
   padding-bottom: 20px;
 `;

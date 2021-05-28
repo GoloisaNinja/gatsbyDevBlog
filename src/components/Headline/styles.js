@@ -8,7 +8,10 @@ export const HeadlineWrapper = styled.div`
     font-style: italic;
     color: #999;
   }
-  > h1 {
+  > h3 {
+    border: 1px solid #00de51;
+    padding: 5px;
+    box-sizing: border-box;
     > span {
       color: #00de51;
     }

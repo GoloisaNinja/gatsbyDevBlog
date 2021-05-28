@@ -25,7 +25,7 @@ export default function ArticleTemplate({ data }) {
     <ArticleLayout>
       <ArticleTitleContentWrapper>
         <Title>{data.strapiArticle.title}</Title>
-        <AuthorWrapper>-{data.strapiArticle.author.username}</AuthorWrapper>
+        <AuthorWrapper>BY {data.strapiArticle.author.username}</AuthorWrapper>
       </ArticleTitleContentWrapper>
 
       <ArticleImageWrapper>

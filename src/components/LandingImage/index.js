@@ -5,7 +5,7 @@ import { useStaticQuery, graphql } from "gatsby";
 export function LandingImage() {
   const data = useStaticQuery(graphql`
     {
-      file(relativePath: { eq: "blogLanding.png" }) {
+      file(relativePath: { eq: "landingImage.png" }) {
         childImageSharp {
           fluid {
             ...GatsbyImageSharpFluid_withWebp

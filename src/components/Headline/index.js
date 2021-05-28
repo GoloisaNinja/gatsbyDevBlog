@@ -4,9 +4,9 @@ import { HeadlineWrapper } from "./styles";
 export function Headline() {
   return (
     <HeadlineWrapper>
-      <h1>
-        Look. A <span>blog</span>.
-      </h1>
+      <h3>
+        HELLO <span>CONTENT</span>
+      </h3>
       <div>
         <h4>Recent Posts</h4>
       </div>

@@ -20,7 +20,7 @@ export const FooterWrapper = styled.footer`
     justify-content: center;
     align-items: center;
     font-size: 12px;
-    color: #00de51;
+    color: white;
     margin-top: 10px;
   }
 `;

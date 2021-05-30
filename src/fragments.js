@@ -12,8 +12,8 @@ export const articleFields = graphql`
       avatar {
         localFile {
           childImageSharp {
-            fixed(width: 45) {
-              ...GatsbyImageSharpFixed_withWebp
+            fluid {
+              ...GatsbyImageSharpFluid_withWebp
             }
           }
         }

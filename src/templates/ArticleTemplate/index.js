@@ -32,8 +32,8 @@ export default function ArticleTemplate({ data }) {
         <AuthorWrapper>
           <AuthorAvatarWrapper>
             <Img
-              fixed={
-                data.strapiArticle.author.avatar.localFile.childImageSharp.fixed
+              fluid={
+                data.strapiArticle.author.avatar.localFile.childImageSharp.fluid
               }
             />
           </AuthorAvatarWrapper>

@@ -36,6 +36,10 @@ export const Title = styled.div`
   text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.75);
   color: #00de51;
   padding: 5px 15px;
+  @media (max-width: 380px) {
+    font-size: 30px;
+    word-break: break-word;
+  }
 `;
 
 export const ArticleContentWrapper = styled.div`
@@ -76,8 +80,9 @@ export const AuthorWrapper = styled.div`
 export const AuthorAvatarWrapper = styled.div`
   > div:first-child {
     margin-right: 10px;
+    width: 40px;
+    max-width: 40px;
     & img {
-      width: 25px;
       border-radius: 50%;
     }
   }

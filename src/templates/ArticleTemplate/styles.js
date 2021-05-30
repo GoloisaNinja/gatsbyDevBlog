@@ -61,11 +61,45 @@ export const ArticleContentWrapper = styled.div`
 `;
 
 export const AuthorWrapper = styled.div`
+  display: flex;
+  align-items: center;
   width: 100%;
+  font-size: 12px;
   text-align: right;
   color: white;
   text-transform: uppercase;
   justify-content: flex-end;
   padding-right: 30px;
   padding-bottom: 20px;
+`;
+
+export const AuthorAvatarWrapper = styled.div`
+  > div:first-child {
+    margin-right: 10px;
+    & img {
+      width: 25px;
+      border-radius: 50%;
+    }
+  }
+`;
+export const ByLineTwitterWrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  > div:first-child {
+    a {
+      text-decoration: none;
+      color: #00de51;
+    }
+    display: flex;
+    align-items: center;
+    font-size: 16px;
+    color: #00de51;
+    margin-top: 5px;
+    &:after {
+      content: "FOLLOW";
+      font-size: 10px;
+      margin-left: 5px;
+    }
+  }
 `;

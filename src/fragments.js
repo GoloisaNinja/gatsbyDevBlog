@@ -5,9 +5,19 @@ export const articleFields = graphql`
     strapiId
     title
     content
+    readTime
     id
     author {
       username
+      avatar {
+        localFile {
+          childImageSharp {
+            fixed(width: 45) {
+              ...GatsbyImageSharpFixed_withWebp
+            }
+          }
+        }
+      }
     }
     created_at
     image {

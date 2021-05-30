@@ -14,6 +14,7 @@ export function ArticleCardGrid() {
           title={article.title}
           previewContent={article.content.slice(0, 200)}
           author={article.author.username}
+          readTime={article.readTime}
           imageFluid={article.image.localFile.childImageSharp.fluid}
           createdAt={article.created_at.slice(0, 10)}
         />

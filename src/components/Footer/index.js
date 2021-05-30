@@ -1,5 +1,4 @@
 import React from "react";
-import { Link } from "gatsby";
 import { SmallLogo } from "../SmallLogo";
 import { FooterWrapper, IconsWrapper } from "./styles";
 import {
@@ -9,6 +8,7 @@ import {
   FaLinkedin,
   FaMugHot,
   FaCopyright,
+  FaGithub,
 } from "react-icons/fa";
 
 export function Footer() {
@@ -18,18 +18,21 @@ export function Footer() {
       <div>
         <SmallLogo />
         <IconsWrapper>
-          <Link to="https://www.twitter.com/GoloisaNinja">
+          <a href="https://twitter.com/goloisaninja">
             <FaTwitter />
-          </Link>
-          <Link to="https://www.reddit.com/GoloisaNinja">
+          </a>
+          <a href="https://www.reddit.com/user/GoloisaNinja">
             <FaRedditAlien />
-          </Link>
-          <Link to="https://jcodes.page">
+          </a>
+          <a href="https://jcodes.page">
             <FaLinkedin />
-          </Link>
-          <Link to="https://jcodes.page">
+          </a>
+          <a href="https://jcodes.page">
             <FaGlobe />
-          </Link>
+          </a>
+          <a href="https://github.com/goloisaninja">
+            <FaGithub />
+          </a>
         </IconsWrapper>
       </div>
       <div>

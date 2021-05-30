@@ -43,6 +43,8 @@ export const Preview = styled.div`
 `;
 
 export const Author = styled.div`
+  display: flex;
+  align-items: center;
   font-weight: bold;
   font-size: 12px;
   font-style: italic;
@@ -50,6 +52,15 @@ export const Author = styled.div`
   margin-left: 15px;
   margin-right: 15px;
   color: #00de51;
+  > div:first-child {
+    font-size: 10px;
+    text-transform: none;
+    font-style: normal;
+    margin-left: 10px;
+    background: rgba(84, 87, 87, 1);
+    border-radius: 10px;
+    padding: 5px 10px;
+  }
 `;
 
 export const CreatedAt = styled.div`

@@ -14,6 +14,7 @@ export function ArticleCard({
   title,
   previewContent,
   author,
+  readTime,
   imageFluid,
   createdAt,
 }) {
@@ -28,7 +29,10 @@ export function ArticleCard({
       </div>
 
       <Title>{title}</Title>
-      <Author>by {author}</Author>
+      <Author>
+        by {author}
+        <div>{readTime}</div>
+      </Author>
       <Preview>
         {previewContent}...
         <span>

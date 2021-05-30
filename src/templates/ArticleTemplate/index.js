@@ -2,12 +2,16 @@ import React from "react";
 import { graphql } from "gatsby";
 import { ArticleLayout } from "components";
 import ReactMarkdown from "react-markdown";
+import Img from "gatsby-image";
+import { FaTwitter } from "react-icons/fa";
 import {
   ArticleImageWrapper,
   ArticleTitleContentWrapper,
   ArticleContentWrapper,
   Title,
   AuthorWrapper,
+  AuthorAvatarWrapper,
+  ByLineTwitterWrapper,
 } from "./styles";
 import BackgroundImage from "gatsby-background-image";
 
@@ -25,7 +29,23 @@ export default function ArticleTemplate({ data }) {
     <ArticleLayout>
       <ArticleTitleContentWrapper>
         <Title>{data.strapiArticle.title}</Title>
-        <AuthorWrapper>BY {data.strapiArticle.author.username}</AuthorWrapper>
+        <AuthorWrapper>
+          <AuthorAvatarWrapper>
+            <Img
+              fixed={
+                data.strapiArticle.author.avatar.localFile.childImageSharp.fixed
+              }
+            />
+          </AuthorAvatarWrapper>
+          <ByLineTwitterWrapper>
+            BY {data.strapiArticle.author.username}
+            <div>
+              <a href="https://twitter.com/GoloisaNinja">
+                <FaTwitter />
+              </a>
+            </div>
+          </ByLineTwitterWrapper>
+        </AuthorWrapper>
       </ArticleTitleContentWrapper>
 
       <ArticleImageWrapper>

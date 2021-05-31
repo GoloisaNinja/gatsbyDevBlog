@@ -1,6 +1,6 @@
 import React from "react";
 import { graphql } from "gatsby";
-import { ArticleLayout } from "components";
+import { ArticleLayout, Seo } from "components";
 import ReactMarkdown from "react-markdown";
 import Img from "gatsby-image";
 import { FaTwitter } from "react-icons/fa";
@@ -24,9 +24,12 @@ export const query = graphql`
 `;
 
 export default function ArticleTemplate({ data }) {
-  console.log(data);
   return (
     <ArticleLayout>
+      <Seo
+        description={data.strapiArticle.id}
+        title={data.strapiArticle.title}
+      />
       <ArticleTitleContentWrapper>
         <Title>{data.strapiArticle.title}</Title>
         <AuthorWrapper>

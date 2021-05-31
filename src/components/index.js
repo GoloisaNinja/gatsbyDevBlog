@@ -8,3 +8,4 @@ export * from "./Headline";
 export * from "./ArticleCard";
 export * from "./ArticleCardGrid";
 export * from "./Footer";
+export * from "./Seo";

@@ -35,7 +35,7 @@ export const Title = styled.div`
   font-weight: bold;
   text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.75);
   color: #00de51;
-  padding: 5px 15px;
+  padding: 5px 20px;
   @media (max-width: 380px) {
     font-size: 30px;
     word-break: break-word;

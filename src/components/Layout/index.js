@@ -2,13 +2,13 @@ import React from "react";
 import { LayoutWrapper } from "./styles";
 import { Header } from "../Header";
 import { Footer } from "../Footer";
-import { LandingImage } from "../LandingImage";
+import { LandingHero } from "../LandingHero";
 
 const Layout = ({ children }) => {
   return (
     <>
       <Header />
-      <LandingImage />
+      <LandingHero />
       <LayoutWrapper>
         <main>{children}</main>
       </LayoutWrapper>

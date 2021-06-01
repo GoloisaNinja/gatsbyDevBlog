@@ -9,3 +9,5 @@ export * from "./ArticleCard";
 export * from "./ArticleCardGrid";
 export * from "./Footer";
 export * from "./Seo";
+export * from "./LandingHero";
+export * from "./Button";

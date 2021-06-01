@@ -3,6 +3,7 @@ import styled from "styled-components";
 export const HeadlineWrapper = styled.div`
   margin: 0 auto;
   text-align: center;
+  margin-top: 50px;
   > div {
     text-align: left;
     font-style: italic;

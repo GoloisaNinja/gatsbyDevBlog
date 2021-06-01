@@ -16,14 +16,16 @@ export const HeroTextWrapper = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-
   > h1 {
     font-size: 65px;
-    font-weight: bolder;
+    font-family: "Monoton", cursive;
     text-transform: uppercase;
     color: #00de51;
     @media (min-width: 375px) {
-      font-size: 85px;
+      font-size: 5em;
+    }
+    @media (min-width: 768px) {
+      font-size: 6em;
     }
   }
   > h4 {

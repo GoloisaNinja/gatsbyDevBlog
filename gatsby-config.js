@@ -12,7 +12,11 @@ module.exports = {
     {
       resolve: `gatsby-plugin-google-fonts`,
       options: {
-        fonts: ["inter:200, 200i, 400, 400i, 700, 700i"],
+        fonts: [
+          "inter:200, 200i, 400, 400i, 700, 700i, 800, 800i, 900, 900i",
+          "poppins:200, 200i, 400, 400i, 700, 700i, 800, 800i, 900, 900i",
+          "monoton: 400",
+        ],
         display: "swap",
       },
     },

@@ -16,6 +16,7 @@ export const HeroTextWrapper = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  margin-bottom: 10px;
   > h1 {
     font-size: 65px;
     font-family: "Monoton", cursive;

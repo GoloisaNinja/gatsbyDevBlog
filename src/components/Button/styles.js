@@ -11,7 +11,7 @@ const fullWidthStyles = ({ fullWidth }) => {
 
 export const Button = styled.button`
   outline: none;
-  padding: 0 10px;
+  padding: 0 20px;
   height: 44px;
   line-height: 44px;
   box-shadow: none;

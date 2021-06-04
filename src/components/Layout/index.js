@@ -11,7 +11,8 @@ const Layout = ({ children }) => {
       <LandingHero
         title="The Jcodes Dev Blog"
         subtitle="A nerd blog. A journey."
-        homepage={true}
+        button={true}
+        buttonText="About Jon"
       />
       <LayoutWrapper>
         <main>{children}</main>

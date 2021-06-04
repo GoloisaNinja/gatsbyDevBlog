@@ -9,9 +9,10 @@ const AboutLayout = ({ children }) => {
     <>
       <Header />
       <LandingHero
-        title="About Jcodes"
+        title="All About Jcodes"
         subtitle="The story of Jon. A developer."
-        homepage={false}
+        button={true}
+        buttonText="Back to Homepage"
       />
       <LayoutWrapper>
         <main>{children}</main>

@@ -30,6 +30,13 @@ module.exports = {
       },
     },
     {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `tech`,
+        path: `${__dirname}/src/images/tech`,
+      },
+    },
+    {
       resolve: "gatsby-source-strapi",
       options: {
         apiURL: process.env.GATSBY_STRAPI_HEROKU || "http://localhost:1337",

@@ -1,17 +1,20 @@
 import React from "react";
+import { navigate } from "gatsby";
 import { HeroWrapper, HeroTextWrapper, HeroButtonWrapper } from "./styles";
 import { Button } from "../Button";
 
-export function LandingHero() {
+export function LandingHero({ title, subtitle, homepage }) {
   return (
     <HeroWrapper>
       <HeroTextWrapper>
-        <h1>The Jcodes Dev Blog</h1>
-        <h4>A nerd blog. A journey.</h4>
+        <h1>{title}</h1>
+        <h4>{subtitle}</h4>
       </HeroTextWrapper>
-      <HeroButtonWrapper>
-        <Button>About Jon</Button>
-      </HeroButtonWrapper>
+      {homepage && (
+        <HeroButtonWrapper>
+          <Button onClick={() => navigate(`/about`)}>About Jon</Button>
+        </HeroButtonWrapper>
+      )}
     </HeroWrapper>
   );
 }

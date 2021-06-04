@@ -11,3 +11,6 @@ export * from "./Footer";
 export * from "./Seo";
 export * from "./LandingHero";
 export * from "./Button";
+export * from "./AboutLayout";
+export * from "./AboutHeading";
+export * from "./AboutContent";

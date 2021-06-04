@@ -4,14 +4,14 @@ import { Header } from "../Header";
 import { Footer } from "../Footer";
 import { LandingHero } from "../LandingHero";
 
-const Layout = ({ children }) => {
+const AboutLayout = ({ children }) => {
   return (
     <>
       <Header />
       <LandingHero
-        title="The Jcodes Dev Blog"
-        subtitle="A nerd blog. A journey."
-        homepage={true}
+        title="About Jcodes"
+        subtitle="The story of Jon. A developer."
+        homepage={false}
       />
       <LayoutWrapper>
         <main>{children}</main>
@@ -21,4 +21,4 @@ const Layout = ({ children }) => {
   );
 };
 
-export { Layout };
+export { AboutLayout };

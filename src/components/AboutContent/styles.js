@@ -20,9 +20,10 @@ export const AboutContentWrapper = styled.div`
   }
   > p {
     color: #ccc;
+    font-size: 20px;
   }
   > p:last-child {
-    font-size: 10px;
+    font-size: 12px;
     width: 50%;
     margin-left: auto;
     padding-bottom: 10px;

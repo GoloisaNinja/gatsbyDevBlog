@@ -35,8 +35,8 @@ export const AboutContentWrapper = styled.div`
 `;
 export const AboutIconWrapper = styled.div`
   display: grid;
-  grid-template-columns: repeat(3, 60px);
-  grid-gap: 15px;
+  grid-template-columns: repeat(3, 70px);
+  grid-gap: 35px;
   justify-content: center;
   align-items: center;
   margin-top: 25px;

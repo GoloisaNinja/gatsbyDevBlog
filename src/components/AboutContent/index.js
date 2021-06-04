@@ -15,7 +15,7 @@ export function AboutContent() {
         edges {
           node {
             childImageSharp {
-              fixed(width: 50) {
+              fixed(width: 70) {
                 aspectRatio
                 ...GatsbyImageSharpFixed_withWebp
               }

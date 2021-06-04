@@ -13,6 +13,7 @@ const AboutLayout = ({ children }) => {
         subtitle="The story of Jon. A developer."
         button={true}
         buttonText="Back to Homepage"
+        to={-1}
       />
       <LayoutWrapper>
         <main>{children}</main>

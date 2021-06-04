@@ -3,7 +3,7 @@ import { navigate } from "gatsby";
 import { HeroWrapper, HeroTextWrapper, HeroButtonWrapper } from "./styles";
 import { Button } from "../Button";
 
-export function LandingHero({ title, subtitle, button, buttonText }) {
+export function LandingHero({ title, subtitle, button, buttonText, to }) {
   return (
     <HeroWrapper>
       <HeroTextWrapper>
@@ -12,7 +12,7 @@ export function LandingHero({ title, subtitle, button, buttonText }) {
       </HeroTextWrapper>
       {button && (
         <HeroButtonWrapper>
-          <Button onClick={() => navigate(`/about`)}>{buttonText}</Button>
+          <Button onClick={() => navigate(to)}>{buttonText}</Button>
         </HeroButtonWrapper>
       )}
     </HeroWrapper>

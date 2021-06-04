@@ -13,6 +13,7 @@ const Layout = ({ children }) => {
         subtitle="A nerd blog. A journey."
         button={true}
         buttonText="About Jon"
+        to="/about"
       />
       <LayoutWrapper>
         <main>{children}</main>

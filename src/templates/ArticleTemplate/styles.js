@@ -43,12 +43,12 @@ export const Title = styled.div`
 `;
 
 export const ArticleContentWrapper = styled.div`
-  font-size: 20px;
-  margin: 10px;
+  font-size: 18px;
+  margin: 5px;
   border-radius: 10px;
   color: #999;
   > blockquote {
-    padding: 25px;
+    padding: 20px;
     font-style: italic;
     font-size: 25px;
     color: #00de51;

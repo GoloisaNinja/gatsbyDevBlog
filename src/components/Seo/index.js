@@ -37,6 +37,14 @@ export function Seo({ description, lang, meta = [], title }) {
           content: metaDescription,
         },
         {
+          property: `og:image`,
+          content: "https://i.imgur.com/atpyVEq.png",
+        },
+        {
+          property: `og:url`,
+          content: "https://jcodes.blog",
+        },
+        {
           property: `og:type`,
           content: `website`,
         },

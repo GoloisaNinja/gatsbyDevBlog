@@ -4,7 +4,7 @@ export const AboutContentWrapper = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding: 25px;
+  padding: 10px;
   margin-top: 50px;
   a {
     text-decoration: none;

@@ -29,6 +29,9 @@ export default function ArticleTemplate({ data }) {
       <Seo
         description={data.strapiArticle.id}
         title={data.strapiArticle.title}
+        articleImage={
+          data.strapiArticle.image.localFile.childImageSharp.fluid.srcWebp
+        }
       />
       <ArticleTitleContentWrapper>
         <Title>{data.strapiArticle.title}</Title>

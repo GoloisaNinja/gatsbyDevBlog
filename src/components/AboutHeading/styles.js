@@ -16,7 +16,7 @@ export const HeadingIntroWrapper = styled.div`
   > div:first-child {
     box-sizing: border-box;
     font-weight: bold;
-    padding: 20px;
+    padding: 10px;
 
     span {
       color: #00de51;

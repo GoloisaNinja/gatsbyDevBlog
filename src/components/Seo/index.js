@@ -65,6 +65,10 @@ export function Seo({ description, lang, meta = [], title, articleImage }) {
           name: `twitter:description`,
           content: metaDescription,
         },
+        {
+          name: `twitter:image`,
+          content: ogImage,
+        },
       ].concat(meta)}
     />
   );

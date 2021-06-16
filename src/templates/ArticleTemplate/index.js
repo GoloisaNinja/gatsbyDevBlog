@@ -30,6 +30,7 @@ export default function ArticleTemplate({ data }) {
         description={data.strapiArticle.id}
         title={data.strapiArticle.title}
         articleImage={
+          `https://jcodes.blog` +
           data.strapiArticle.image.localFile.childImageSharp.fluid.srcWebp
         }
       />

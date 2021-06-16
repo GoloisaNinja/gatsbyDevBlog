@@ -51,7 +51,7 @@ export function Seo({ description, lang, meta = [], title, articleImage }) {
         },
         {
           name: `twitter:card`,
-          content: articleImage ? `summary_large_image` : `summary`,
+          content: `summary`,
         },
         {
           name: `twitter:creator`,

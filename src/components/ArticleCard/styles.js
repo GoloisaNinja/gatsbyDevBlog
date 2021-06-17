@@ -53,6 +53,7 @@ export const Author = styled.div`
   margin-right: 15px;
   color: #00de51;
   > div:first-child {
+    white-space: nowrap;
     font-size: 10px;
     text-transform: none;
     font-style: normal;

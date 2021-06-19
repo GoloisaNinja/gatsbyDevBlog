@@ -6,7 +6,7 @@ import { AboutHeadingWrapper, HeadingIntroWrapper } from "./styles";
 export function AboutHeading() {
   const data = useStaticQuery(graphql`
     {
-      file(relativePath: { eq: "aboutImg.png" }) {
+      file(relativePath: { eq: "me.png" }) {
         childImageSharp {
           fluid(maxWidth: 600) {
             ...GatsbyImageSharpFluid_withWebp

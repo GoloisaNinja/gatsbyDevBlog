@@ -7,7 +7,7 @@ export function Header() {
   return (
     <HeaderWrapper>
       <div>
-        <Link to="/">
+        <Link to="/" alt="The Jcodes Blog Logo">
           <Logo />
         </Link>
         <h3>DEVELOPER BLOG</h3>

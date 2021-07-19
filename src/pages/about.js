@@ -9,6 +9,7 @@ export default function AboutPage() {
           "All about Jon and his shortcomings...I mean accomplishments."
         }
         title={"About Jcodes"}
+        lang="en"
       />
       <AboutHeading />
       <AboutContent />

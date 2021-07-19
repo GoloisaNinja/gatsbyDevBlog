@@ -39,7 +39,9 @@ export function ArticleCard({
       <Preview>
         {previewContent}...
         <span>
-          <Link to={`/articles/${articleTitle}`}>READ MORE</Link>
+          <Link to={`/articles/${articleTitle}`} alt={title}>
+            READ MORE
+          </Link>
         </span>
       </Preview>
       <CreatedAt>CONTENT CREATED {createdAt}</CreatedAt>

@@ -34,6 +34,7 @@ export default function ArticleTemplate({ data }) {
           `https://jcodes.blog` +
           data.strapiArticle.image.localFile.childImageSharp.fluid.srcWebp
         }
+        lang="en"
       />
       <ButtonWrapper>
         <Button onClick={() => navigate("/")}>Back to articles</Button>
@@ -47,6 +48,7 @@ export default function ArticleTemplate({ data }) {
               fluid={
                 data.strapiArticle.author.avatar.localFile.childImageSharp.fluid
               }
+              alt="Author Image"
             />
           </AuthorAvatarWrapper>
           <ByLineTwitterWrapper>
@@ -66,6 +68,10 @@ export default function ArticleTemplate({ data }) {
       <ArticleImageWrapper>
         <BackgroundImage
           fluid={data.strapiArticle.image.localFile.childImageSharp.fluid}
+          alt={
+            data.strapiArticle.image.localFile.childImageSharp.fluid
+              .originalName
+          }
         />
       </ArticleImageWrapper>
       <ArticleContentWrapper>

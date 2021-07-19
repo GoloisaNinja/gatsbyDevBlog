@@ -14,5 +14,7 @@ export function SmallLogo() {
       }
     }
   `);
-  return <Img fixed={data.file.childImageSharp.fixed} />;
+  return (
+    <Img fixed={data.file.childImageSharp.fixed} alt="The Jcodes Blog Logo" />
+  );
 }

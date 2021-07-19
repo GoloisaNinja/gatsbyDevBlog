@@ -7,6 +7,7 @@ export default function IndexPage() {
       <Seo
         description={"Developer blog by an errant programmer"}
         title={"Jcodes Blog Homepage"}
+        lang="en"
       />
       <Headline />
       <ArticleCardGrid />

@@ -1,6 +1,6 @@
 import React from "react";
-import { graphql } from "gatsby";
-import { ArticleLayout, Seo } from "components";
+import { graphql, navigate } from "gatsby";
+import { ArticleLayout, Seo, Button } from "components";
 import ReactMarkdown from "react-markdown";
 import Img from "gatsby-image";
 import { FaTwitter } from "react-icons/fa";
@@ -12,6 +12,7 @@ import {
   AuthorWrapper,
   AuthorAvatarWrapper,
   ByLineTwitterWrapper,
+  ButtonWrapper,
 } from "./styles";
 import BackgroundImage from "gatsby-background-image";
 
@@ -34,6 +35,10 @@ export default function ArticleTemplate({ data }) {
           data.strapiArticle.image.localFile.childImageSharp.fluid.srcWebp
         }
       />
+      <ButtonWrapper>
+        <Button onClick={() => navigate("/")}>Back to articles</Button>
+      </ButtonWrapper>
+
       <ArticleTitleContentWrapper>
         <Title>{data.strapiArticle.title}</Title>
         <AuthorWrapper>
@@ -47,7 +52,10 @@ export default function ArticleTemplate({ data }) {
           <ByLineTwitterWrapper>
             BY {data.strapiArticle.author.username}
             <div>
-              <a href="https://twitter.com/GoloisaNinja">
+              <a
+                href="https://twitter.com/GoloisaNinja"
+                alt="Jon's Twitter Page"
+              >
                 <FaTwitter />
               </a>
             </div>

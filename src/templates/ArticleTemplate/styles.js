@@ -11,7 +11,10 @@ export const ArticleImageWrapper = styled.div`
     flex-grow: 1;
   }
 `;
-
+export const ButtonWrapper = styled.div`
+  margin-top: 25px;
+  margin-bottom: 25px;
+`;
 export const ArticleTitleContentWrapper = styled.div`
   display: flex;
   flex-direction: column;

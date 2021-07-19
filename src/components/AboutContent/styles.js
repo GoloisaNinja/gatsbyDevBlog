@@ -22,7 +22,7 @@ export const AboutContentWrapper = styled.div`
     color: #ccc;
     font-size: 20px;
   }
-  > p:last-child {
+  /* > p:last-child {
     font-size: 12px;
     width: 50%;
     margin-left: auto;
@@ -31,7 +31,7 @@ export const AboutContentWrapper = styled.div`
     @media (min-width: 500px) {
       width: 25%;
     }
-  }
+  } */
 `;
 export const AboutIconWrapper = styled.div`
   display: grid;

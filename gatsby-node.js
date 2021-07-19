@@ -16,6 +16,7 @@ exports.createPages = async ({ graphql, actions }) => {
         edges {
           node {
             id
+            title
           }
         }
       }
@@ -23,8 +24,10 @@ exports.createPages = async ({ graphql, actions }) => {
   `);
 
   data.allStrapiArticle.edges.forEach(({ node }) => {
+    const regex = new RegExp(/\s/gm);
+    const articleTitle = node.title.replace(regex, "_");
     createPage({
-      path: `articles/${node.id}`,
+      path: `articles/${articleTitle}`,
       context: {
         articleId: node.id,
       },

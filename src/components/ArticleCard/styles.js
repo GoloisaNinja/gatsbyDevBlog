@@ -61,6 +61,8 @@ export const Author = styled.div`
     background: rgba(84, 87, 87, 1);
     border-radius: 10px;
     padding: 5px 10px;
+    color: #fff;
+    font-weight: bold;
   }
 `;
 

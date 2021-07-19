@@ -111,7 +111,7 @@ export function AboutContent() {
         <br />
         <br />
       </p>
-      <p>
+      {/* <p>
         I need to quickly apologise (with an "s") to my wonderful, amazing wife
         Lou Lou. I used "Jon" a lot on this page and my wife hates that{" "}
         <span role="img" aria-label="laughing emoji">
@@ -119,7 +119,7 @@ export function AboutContent() {
         </span>{" "}
         - fun fact: my wife refuses to call me Jon and has called me Jack since
         the day we met
-      </p>
+      </p> */}
     </AboutContentWrapper>
   );
 }

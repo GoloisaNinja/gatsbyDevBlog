@@ -16,14 +16,17 @@ export function ArticleCard({
   author,
   readTime,
   imageFluid,
+  imageAlt,
   createdAt,
 }) {
+  const regex = new RegExp(/\s/gm);
+  const articleTitle = title.replace(regex, "_");
   return (
     <ArticleCardWrapper>
       <div>
         <div>
-          <Link to={`/articles/${id}`}>
-            <Img fluid={imageFluid} />
+          <Link to={`/articles/${articleTitle}`} alt={title}>
+            <Img fluid={imageFluid} alt={imageAlt} />
           </Link>
         </div>
       </div>
@@ -36,7 +39,7 @@ export function ArticleCard({
       <Preview>
         {previewContent}...
         <span>
-          <Link to={`/articles/${id}`}>READ MORE</Link>
+          <Link to={`/articles/${articleTitle}`}>READ MORE</Link>
         </span>
       </Preview>
       <CreatedAt>CONTENT CREATED {createdAt}</CreatedAt>

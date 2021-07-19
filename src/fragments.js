@@ -25,6 +25,7 @@ export const articleFields = graphql`
         childImageSharp {
           fluid(maxWidth: 600) {
             ...GatsbyImageSharpFluid_withWebp
+            originalName
           }
         }
       }

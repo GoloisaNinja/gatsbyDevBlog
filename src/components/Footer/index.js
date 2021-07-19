@@ -18,22 +18,25 @@ export function Footer() {
       <div>
         <SmallLogo />
         <IconsWrapper>
-          <a href="https://twitter.com/goloisaninja" alt="Jon's Twitter Page">
+          <a href="https://twitter.com/goloisaninja" alt="Twitter Page">
             <FaTwitter />
           </a>
           <a
             href="https://www.reddit.com/user/GoloisaNinja"
-            alt="Jon's Reddit Profile"
+            alt="Reddit Profile"
           >
             <FaRedditAlien />
           </a>
-          <a href="https://jcodes.page" alt="Jon's LinkedIn Page">
+          <a
+            href="https://www.linkedin.com/in/jonmcollins/"
+            alt="LinkedIn Page"
+          >
             <FaLinkedin />
           </a>
-          <a href="https://jcodes.page" alt="Jon's Portfolio Page">
+          <a href="https://jcodes.page" alt="Portfolio Page">
             <FaGlobe />
           </a>
-          <a href="https://github.com/goloisaninja" alt="Jon's Github Page">
+          <a href="https://github.com/goloisaninja" alt="Github Page">
             <FaGithub />
           </a>
         </IconsWrapper>

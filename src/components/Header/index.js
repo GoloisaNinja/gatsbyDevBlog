@@ -7,7 +7,11 @@ export function Header() {
   return (
     <HeaderWrapper>
       <div>
-        <Link to="/" alt="The Jcodes Blog Logo">
+        <Link
+          to="/"
+          alt="The Jcodes Blog Logo"
+          aria-label="Logo containing letters for Jcodes"
+        >
           <Logo />
         </Link>
         <h3>DEVELOPER BLOG</h3>

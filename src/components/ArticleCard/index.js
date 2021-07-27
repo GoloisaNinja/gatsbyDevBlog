@@ -1,12 +1,14 @@
 import React from "react";
 import Img from "gatsby-image";
-import { Link } from "gatsby";
+import { Link, navigate } from "gatsby";
+import { Button } from "../Button";
 import {
   ArticleCardWrapper,
   Title,
   Preview,
   Author,
   CreatedAt,
+  ButtonWrapper,
 } from "./styles";
 
 export function ArticleCard({
@@ -36,14 +38,15 @@ export function ArticleCard({
         by {author}
         <div>{readTime}</div>
       </Author>
-      <Preview>
-        {previewContent}...
-        <span>
-          <Link to={`/articles/${articleTitle}`} alt={title}>
-            READ MORE
-          </Link>
-        </span>
-      </Preview>
+      <Preview>{previewContent}</Preview>
+      <ButtonWrapper>
+        <Button
+          fullWidth={true}
+          onClick={() => navigate(`/articles/${articleTitle}`)}
+        >
+          CONTINUE READING
+        </Button>
+      </ButtonWrapper>
       <CreatedAt>CONTENT CREATED {createdAt}</CreatedAt>
     </ArticleCardWrapper>
   );

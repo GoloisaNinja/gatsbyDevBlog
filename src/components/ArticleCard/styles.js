@@ -31,7 +31,7 @@ export const Preview = styled.div`
   text-align: left;
   padding: 0 20px 10px 20px;
   text-overflow: ellipsis;
-  margin-top: 10px;
+  margin-top: 20px;
   margin-bottom: 10px;
   flex-grow: 1;
   > span {
@@ -71,4 +71,10 @@ export const CreatedAt = styled.div`
   margin-bottom: 10px;
   margin-right: 20px;
   text-align: right;
+`;
+
+export const ButtonWrapper = styled.div`
+  width: 90%;
+  margin: 0 auto;
+  margin-bottom: 20px;
 `;

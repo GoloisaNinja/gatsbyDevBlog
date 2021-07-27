@@ -6,6 +6,7 @@ export const articleFields = graphql`
     title
     content
     readTime
+    preview
     id
     author {
       username

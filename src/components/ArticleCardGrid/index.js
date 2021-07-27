@@ -12,7 +12,7 @@ export function ArticleCardGrid() {
           key={article.strapiId}
           id={article.id}
           title={article.title}
-          previewContent={article.content.slice(0, 200)}
+          previewContent={article.preview}
           author={article.author.username}
           readTime={article.readTime}
           imageFluid={article.image.localFile.childImageSharp.fluid}

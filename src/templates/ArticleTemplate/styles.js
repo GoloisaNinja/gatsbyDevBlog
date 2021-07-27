@@ -50,6 +50,20 @@ export const ArticleContentWrapper = styled.div`
   margin: 5px;
   border-radius: 10px;
   color: #999;
+  > ul {
+    margin-top: 25px;
+    margin-bottom: 25px;
+  }
+  > p {
+    strong {
+      color: #fff;
+    }
+    img {
+      width: 100%;
+      margin-top: 25px;
+      margin-bottom: 25px;
+    }
+  }
   > blockquote {
     padding: 20px;
     font-style: italic;

@@ -12,8 +12,9 @@ export const ArticleImageWrapper = styled.div`
   }
 `;
 export const ButtonWrapper = styled.div`
-  margin-top: 25px;
+  margin-top: 70px;
   margin-bottom: 25px;
+  margin-left: 15px;
 `;
 export const ArticleTitleContentWrapper = styled.div`
   display: flex;
@@ -25,8 +26,7 @@ export const ArticleTitleContentWrapper = styled.div`
   color: white;
   text-decoration: none;
   text-align: left;
-  border: 1px solid #00de51;
-  background: rgba(50, 50, 50, 1);
+  padding: 0 15px;
 `;
 
 export const Title = styled.div`
@@ -34,20 +34,34 @@ export const Title = styled.div`
   margin-bottom: 15px;
   display: inline-block;
   text-transform: uppercase;
-  font-size: 40px;
+  font-family: "Prompt", sans-serif;
+  font-size: 30px;
   font-weight: bold;
-  text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.75);
-  color: #00de51;
-  padding: 5px 20px;
-  @media (max-width: 380px) {
-    font-size: 30px;
-    word-break: break-word;
+  color: ${props => props.theme.colors.mainBlue};
+  padding: 5px;
+  @media (min-width: 320px) {
+    font-size: 35px;
+  }
+  @media (min-width: 385px) {
+    font-size: 50px;
+  }
+  @media (min-width: 500px) {
+    font-size: 65px;
+  }
+  @media (min-width: 700px) {
+    font-size: 75px;
+  }
+  @media (min-width: 900px) {
+    font-size: 95px;
+  }
+  @media (min-width: 1100px) {
+    font-size: 125px;
   }
 `;
 
 export const ArticleContentWrapper = styled.div`
   font-size: 18px;
-  margin: 5px;
+  margin: 50px 15px 125px 15px;
   border-radius: 10px;
   color: #999;
   > ul {
@@ -68,16 +82,19 @@ export const ArticleContentWrapper = styled.div`
     padding: 20px;
     font-style: italic;
     font-size: 25px;
-    color: #00de51;
+    color: ${props => props.theme.colors.accentPurple};
     margin: 20px;
     display: flex;
     justify-content: center;
   }
   > h3 {
-    color: white;
-    border-bottom: 2px solid #00de51;
+    font-family: "Prompt", sans-serif;
+    font-weight: 500;
+    color: ${props => props.theme.colors.mainBlue};
+    border-bottom: 2px solid ${props => props.theme.colors.mainBlue};
     padding-bottom: 15px;
     text-transform: uppercase;
+    word-break: break-word;
   }
 `;
 
@@ -107,16 +124,16 @@ export const AuthorAvatarWrapper = styled.div`
 export const ByLineTwitterWrapper = styled.div`
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-end;
   > div:first-child {
     a {
       text-decoration: none;
-      color: #00de51;
+      color: ${props => props.theme.colors.mainBlue};
     }
     display: flex;
     align-items: center;
     font-size: 16px;
-    color: #00de51;
+    color: ${props => props.theme.colors.accentPurple};
     margin-top: 5px;
     &:after {
       content: "FOLLOW";

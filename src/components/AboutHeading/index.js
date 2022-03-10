@@ -1,12 +1,13 @@
 import React from "react";
 import { useStaticQuery, graphql } from "gatsby";
 import Img from "gatsby-image";
+import Theme from "../Theme";
 import { AboutHeadingWrapper, HeadingIntroWrapper } from "./styles";
 
 export function AboutHeading() {
   const data = useStaticQuery(graphql`
     {
-      file(relativePath: { eq: "me.png" }) {
+      file(relativePath: { eq: "codingnobg.webp" }) {
         childImageSharp {
           fluid(maxWidth: 600) {
             ...GatsbyImageSharpFluid_withWebp
@@ -16,17 +17,23 @@ export function AboutHeading() {
     }
   `);
   return (
-    <AboutHeadingWrapper>
-      <HeadingIntroWrapper>
-        <div>
-          <h2>
-            <span>Hello</span> there. I'm Jon, and this is my <span>blog</span>.
-            I'll just tell you a little about <span>myself</span>.
-          </h2>
-        </div>
-        <Img fluid={data.file.childImageSharp.fluid} />
-      </HeadingIntroWrapper>
-    </AboutHeadingWrapper>
+    <Theme>
+      <AboutHeadingWrapper>
+        <HeadingIntroWrapper>
+          <div>
+            <h4>Hello there</h4>
+            <p>
+              {" "}
+              I'm Jon, and I'm a Full Stack Developer. My path to becoming a
+              developer wasn't exactly smooth, but then, I think that is true
+              for so many developers and would-be developers! Keep reading and
+              I'll tell you a little more about myself and my journey thus far!
+            </p>
+          </div>
+          <Img fluid={data.file.childImageSharp.fluid} />
+        </HeadingIntroWrapper>
+      </AboutHeadingWrapper>
+    </Theme>
   );
 }
 

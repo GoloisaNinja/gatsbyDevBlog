@@ -1,6 +1,13 @@
 import React from "react";
-import { SmallLogo } from "../SmallLogo";
-import { FooterWrapper, IconsWrapper } from "./styles";
+import Theme from "../Theme";
+import { Link } from "gatsby";
+import {
+  WavesWrapper,
+  FooterWrapper,
+  SiteLinkWrapper,
+  IconsWrapper,
+  Copyright,
+} from "./styles";
 import {
   FaTwitter,
   FaGlobe,
@@ -14,9 +21,25 @@ import {
 export function Footer() {
   const year = new Date().getFullYear();
   return (
-    <FooterWrapper>
-      <div>
-        <SmallLogo />
+    <Theme>
+      <WavesWrapper>
+        <div>
+          <svg
+            data-name="Layer 1"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 1200 120"
+            preserveAspectRatio="none"
+          >
+            <path d="M985.66,92.83C906.67,72,823.78,31,743.84,14.19c-82.26-17.34-168.06-16.33-250.45.39-57.84,11.73-114,31.07-172,41.86A600.21,600.21,0,0,1,0,27.35V120H1200V95.8C1132.19,118.92,1055.71,111.31,985.66,92.83Z"></path>
+          </svg>
+        </div>
+      </WavesWrapper>
+      <FooterWrapper>
+        <SiteLinkWrapper>
+          <Link to="/">Home</Link>
+          <Link to="/">Articles</Link>
+          <Link to="/about">About</Link>
+        </SiteLinkWrapper>
         <IconsWrapper>
           <a
             href="https://twitter.com/goloisaninja"
@@ -54,12 +77,16 @@ export function Footer() {
             <FaGithub />
           </a>
         </IconsWrapper>
-      </div>
-      <div>
-        <p>
-          Made with <FaMugHot /> Jon Collins Dev <FaCopyright /> {year}
-        </p>
-      </div>
-    </FooterWrapper>
+
+        <Copyright>
+          <p>
+            Made with <FaMugHot /> & Gatsby
+          </p>
+          <p>
+            Jon Collins Dev <FaCopyright /> {year}
+          </p>
+        </Copyright>
+      </FooterWrapper>
+    </Theme>
   );
 }

@@ -1,8 +1,10 @@
 import React from "react";
 import { graphql, navigate } from "gatsby";
-import { ArticleLayout, Seo, Button } from "components";
+import { ArticleLayout, Seo } from "components";
 import ReactMarkdown from "react-markdown";
 import Img from "gatsby-image";
+import NewButton from "../../components/NewButton";
+import Theme from "../../components/Theme";
 import { FaTwitter } from "react-icons/fa";
 import {
   ArticleImageWrapper,
@@ -25,58 +27,64 @@ export const query = graphql`
 `;
 
 export default function ArticleTemplate({ data }) {
+  const handleClick = () => {
+    navigate("/");
+  };
   return (
-    <ArticleLayout>
-      <Seo
-        description={data.strapiArticle.id}
-        title={data.strapiArticle.title}
-        articleImage={
-          `https://jcodes.blog` +
-          data.strapiArticle.image.localFile.childImageSharp.fluid.srcWebp
-        }
-        lang="en"
-      />
-      <ButtonWrapper>
-        <Button onClick={() => navigate("/")}>Back to articles</Button>
-      </ButtonWrapper>
-
-      <ArticleTitleContentWrapper>
-        <Title>{data.strapiArticle.title}</Title>
-        <AuthorWrapper>
-          <AuthorAvatarWrapper>
-            <Img
-              fluid={
-                data.strapiArticle.author.avatar.localFile.childImageSharp.fluid
-              }
-              alt="Author Image"
-            />
-          </AuthorAvatarWrapper>
-          <ByLineTwitterWrapper>
-            BY {data.strapiArticle.author.username}
-            <div>
-              <a
-                href="https://twitter.com/GoloisaNinja"
-                alt="Jon's Twitter Page"
-              >
-                <FaTwitter />
-              </a>
-            </div>
-          </ByLineTwitterWrapper>
-        </AuthorWrapper>
-      </ArticleTitleContentWrapper>
-
-      <ArticleImageWrapper>
-        <BackgroundImage
-          fluid={data.strapiArticle.image.localFile.childImageSharp.fluid}
-          alt={
-            data.strapiArticle.image.localFile.childImageSharp.fluid
-              .originalName
+    <Theme>
+      <ArticleLayout>
+        <Seo
+          description={data.strapiArticle.id}
+          title={data.strapiArticle.title}
+          articleImage={
+            `https://jcodes.blog` +
+            data.strapiArticle.image.localFile.childImageSharp.fluid.srcWebp
           }
+          lang="en"
         />
-      </ArticleImageWrapper>
-      <ArticleContentWrapper>
-        <ReactMarkdown children={data.strapiArticle.content} />
-      </ArticleContentWrapper>
-    </ArticleLayout>
+        <ButtonWrapper>
+          <NewButton handleClick={handleClick} text="GO BACK" />
+        </ButtonWrapper>
+
+        <ArticleTitleContentWrapper>
+          <Title>{data.strapiArticle.title}</Title>
+          <AuthorWrapper>
+            <AuthorAvatarWrapper>
+              <Img
+                fluid={
+                  data.strapiArticle.author.avatar.localFile.childImageSharp
+                    .fluid
+                }
+                alt="Author Image"
+              />
+            </AuthorAvatarWrapper>
+            <ByLineTwitterWrapper>
+              BY {data.strapiArticle.author.username}
+              <div>
+                <a
+                  href="https://twitter.com/GoloisaNinja"
+                  alt="Jon's Twitter Page"
+                >
+                  <FaTwitter />
+                </a>
+              </div>
+            </ByLineTwitterWrapper>
+          </AuthorWrapper>
+        </ArticleTitleContentWrapper>
+
+        <ArticleImageWrapper>
+          <BackgroundImage
+            fluid={data.strapiArticle.image.localFile.childImageSharp.fluid}
+            alt={
+              data.strapiArticle.image.localFile.childImageSharp.fluid
+                .originalName
+            }
+          />
+        </ArticleImageWrapper>
+        <ArticleContentWrapper>
+          <ReactMarkdown children={data.strapiArticle.content} />
+        </ArticleContentWrapper>
+      </ArticleLayout>
+    </Theme>
   );
 }

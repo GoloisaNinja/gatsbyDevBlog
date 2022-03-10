@@ -1,14 +1,12 @@
 import styled from "styled-components";
 
 export const ArticleCardWrapper = styled.div`
-  border: 1px solid #00de51;
   display: flex;
   flex-direction: column;
   border-top-left-radius: 5px;
   border-top-right-radius: 5px;
   overflow: hidden;
   > div:first-child {
-    border-bottom: 1px solid #00de51;
     overflow: hidden;
     > div:first-child {
       max-width: 100%;
@@ -18,40 +16,41 @@ export const ArticleCardWrapper = styled.div`
       }
     }
   }
+  > div:nth-child(2) {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    background-color: #303030;
+    padding: 15px;
+  }
 `;
 
 export const Title = styled.div`
-  font-weight: bold;
+  font-family: "Prompt", sans-serif;
+  color: ${props => props.theme.colors.mainBlue};
+  font-weight: 400;
   font-size: 25px;
-  margin: 15px;
+  margin-bottom: 20px;
 `;
 
 export const Preview = styled.div`
+  font-size: 14px;
   color: #999;
   text-align: left;
-  padding: 0 20px 10px 20px;
   text-overflow: ellipsis;
   margin-top: 20px;
-  margin-bottom: 10px;
-  flex-grow: 1;
-  > span {
-    > a {
-      text-decoration: none;
-      color: #00de51;
-    }
-  }
+  margin-bottom: 20px;
+  flex: 1;
 `;
 
 export const Author = styled.div`
   display: flex;
   align-items: center;
   font-weight: bold;
-  font-size: 12px;
-  font-style: italic;
+  font-size: 10px;
   text-transform: uppercase;
-  margin-left: 15px;
-  margin-right: 15px;
-  color: #00de51;
+
+  color: #fff;
   > div:first-child {
     white-space: nowrap;
     font-size: 10px;
@@ -69,12 +68,10 @@ export const Author = styled.div`
 export const CreatedAt = styled.div`
   font-size: 10px;
   margin-bottom: 10px;
-  margin-right: 20px;
   text-align: right;
+  color: ${props => props.theme.colors.accentPurple};
 `;
 
 export const ButtonWrapper = styled.div`
-  width: 90%;
-  margin: 0 auto;
   margin-bottom: 20px;
 `;

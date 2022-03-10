@@ -3,7 +3,7 @@ require("dotenv").config({ path: ".env" });
 module.exports = {
   siteMetadata: {
     title: `Jcodes Dev Blog`,
-    description: `A developer blog detailing the various misdeeds of a errant programmer.`,
+    description: `Jon Collins Software Developer Blog, detailing the various misdeeds of a errant programmer.`,
     author: `@goloisaninja`,
   },
   plugins: [
@@ -13,9 +13,22 @@ module.exports = {
       resolve: `gatsby-plugin-google-fonts`,
       options: {
         fonts: [
-          "inter:200, 200i, 400, 400i, 700, 700i, 800, 800i, 900, 900i",
-          "poppins:200, 200i, 400, 400i, 700, 700i, 800, 800i, 900, 900i",
-          "monoton: 400",
+          "inter:200",
+          "inter:300",
+          "inter:400",
+          "inter:500",
+          "inter:600",
+          "inter:700",
+          "inter:800",
+          "inter:900",
+          "prompt:200",
+          "prompt:300",
+          "prompt:400",
+          "prompt:500",
+          "prompt:600",
+          "prompt:700",
+          "prompt:800",
+          "prompt:900",
         ],
         display: "swap",
       },

@@ -4,17 +4,20 @@ export const AboutContentWrapper = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding: 10px;
+  padding: 0 15px;
   margin-top: 50px;
+  margin-bottom: 125px;
   a {
     text-decoration: none;
-    color: #00de51;
+    color: ${props => props.theme.colors.accentPurple};
     font-weight: bold;
   }
   span {
-    color: #00de51;
+    color: ${props => props.theme.colors.accentPurple};
   }
   > h3 {
+    font-family: "Prompt", sans-serif;
+    color: ${props => props.theme.colors.mainBlue};
     text-align: center;
     font-weight: bold;
   }
@@ -22,16 +25,6 @@ export const AboutContentWrapper = styled.div`
     color: #ccc;
     font-size: 20px;
   }
-  /* > p:last-child {
-    font-size: 12px;
-    width: 50%;
-    margin-left: auto;
-    padding-bottom: 10px;
-    border-bottom: 1px solid #00de51;
-    @media (min-width: 500px) {
-      width: 25%;
-    }
-  } */
 `;
 export const AboutIconWrapper = styled.div`
   display: grid;

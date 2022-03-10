@@ -2,26 +2,30 @@ import styled from "styled-components";
 
 export const HeaderWrapper = styled.header`
   display: flex;
+  justify-content: flex-end;
   align-items: center;
   width: 100%;
-  margin: 0 auto;
-  padding: 5px 10px;
-  box-sizing: border-box;
-  flex-wrap: nowrap;
   background: black;
   color: white;
-  > div {
+  height: 50px;
+  padding-right: 35px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 3;
+  > ul {
     display: flex;
-    align-items: center;
-    flex-grow: 1;
-    > h3 {
-      @media (max-width: 600px) {
-        display: none;
+    font-family: "Prompt", sans-serif;
+    font-weight: 500;
+    > li {
+      list-style: none;
+      > a {
+        text-decoration: none;
+        color: #fff;
       }
     }
-  }
-  > svg {
-    color: #00de51;
-    padding-right: 20px;
+    > li:not(:last-child) {
+      margin-right: 25px;
+    }
   }
 `;

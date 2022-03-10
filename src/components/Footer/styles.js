@@ -1,40 +1,67 @@
 import styled from "styled-components";
 
+export const WavesWrapper = styled.div`
+  position: relative;
+  width: 100%;
+  z-index: -1;
+  > div:first-child {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    > svg {
+      position: relative;
+      display: block;
+      width: calc(132% + 1.3px);
+      height: 86px;
+      > path {
+        fill: ${props => props.theme.colors.mainBlue};
+      }
+    }
+  }
+`;
+
 export const FooterWrapper = styled.footer`
+  display: grid;
+  grid-template-areas:
+    "site icons other"
+    "copyright copyright copyright";
+  grid-gap: 15px;
+  width: 100%;
+  background-color: ${props => props.theme.colors.mainBlue};
+  font-family: "Prompt", sans-serif;
+  color: #303030;
+  padding: 25px;
+`;
+export const SiteLinkWrapper = styled.div`
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  height: 150px;
-  width: 100%;
-  background: rgba(50, 50, 50, 1);
-  color: white;
-  > div:first-child {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  > div:nth-child(2) {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    font-size: 12px;
-    color: white;
-    margin-top: 10px;
+  grid-area: site;
+  max-width: 300px;
+  > a {
+    text-decoration: none;
+    color: #303030;
+    margin-bottom: 25px;
+    font-weight: 700;
   }
 `;
 export const IconsWrapper = styled.div`
-  display: flex;
-  font-size: 25px;
-  margin-left: 15px;
-  margin-top: 10px;
+  display: grid;
+  grid-template-areas:
+    "twiiter reddit"
+    "linkedin portfolio"
+    "github github";
+  grid-area: icons;
+  max-width: 300px;
   > a {
-    color: #00de51;
-    text-decoration: none;
-    margin-left: 10px;
+    > svg {
+      font-size: 25px;
+      color: #303030;
+    }
   }
-  > a:first-child {
-    margin-left: 0;
-  }
+`;
+export const Copyright = styled.div`
+  grid-area: copyright;
 `;

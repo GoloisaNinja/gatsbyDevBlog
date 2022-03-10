@@ -1,21 +1,24 @@
 import React from "react";
+import Theme from "../Theme";
 import { HeaderWrapper } from "./styles";
-import { Logo } from "../Logo";
 import { Link } from "gatsby";
 
 export function Header() {
   return (
-    <HeaderWrapper>
-      <div>
-        <Link
-          to="/"
-          alt="The Jcodes Blog Logo"
-          aria-label="Logo containing letters for Jcodes"
-        >
-          <Logo />
-        </Link>
-        <h3>DEVELOPER BLOG</h3>
-      </div>
-    </HeaderWrapper>
+    <Theme>
+      <HeaderWrapper>
+        <ul>
+          <li>
+            <Link to="/">Home</Link>
+          </li>
+          <li>
+            <Link to="/">Articles</Link>
+          </li>
+          <li>
+            <Link to="/about">About</Link>
+          </li>
+        </ul>
+      </HeaderWrapper>
+    </Theme>
   );
 }

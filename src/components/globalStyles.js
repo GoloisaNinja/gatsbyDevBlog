@@ -7,6 +7,9 @@ export const GlobalStyle = createGlobalStyle`
     height: 40px;
     font-size: 16px;
   }
+  * {
+    box-sizing: border-box;
+  }
   body{
     font-family: 'Inter', sans-serif;
     line-height: 1.2;

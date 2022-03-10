@@ -37,22 +37,26 @@ export const HeadlineGridWrapper = styled.div`
   }
   > div:first-child {
     grid-area: one;
-    > svg:last-child {
-      margin-left: 10px;
-    }
-    > svg {
-      font-size: 25px;
-      color: #303030;
+    > a {
+      > svg:last-child {
+        margin-left: 10px;
+      }
+      > svg {
+        font-size: 35px;
+        color: #303030;
+      }
     }
   }
   > div:nth-child(2) {
     grid-area: two;
-    > svg:last-child {
-      margin-left: 10px;
-    }
-    > svg {
-      font-size: 25px;
-      color: #303030;
+    > a {
+      > svg:last-child {
+        margin-left: 10px;
+      }
+      > svg {
+        font-size: 35px;
+        color: #303030;
+      }
     }
   }
 `;

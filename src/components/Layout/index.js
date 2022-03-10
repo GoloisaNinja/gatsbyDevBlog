@@ -4,7 +4,7 @@ import { Header } from "../Header";
 import { Footer } from "../Footer";
 import { LandingHero } from "../LandingHero";
 
-const Layout = ({ children }) => {
+const Layout = ({ children, page, bg }) => {
   const blueSpan = {
     fontFamily: "Prompt, 'sans-serif'",
     color: "#2ccbd1",
@@ -15,28 +15,67 @@ const Layout = ({ children }) => {
     color: "#d4a6ed",
     fontWeight: "900",
   };
-  const title = (
-    <h1>
-      The Jcodes <span style={purpleSpan}>Dev </span>Blog
-    </h1>
-  );
-  const subtitle = (
-    <h4>
-      A nerd <span style={blueSpan}>blog</span>. A{" "}
-      <span style={blueSpan}>journey</span>.
-    </h4>
-  );
+  const detailsObject = {
+    landing: {
+      title: (
+        <h1>
+          The Jcodes <span style={purpleSpan}>Dev </span>Blog
+        </h1>
+      ),
+      subtitle: (
+        <h4>
+          A nerd <span style={blueSpan}>blog</span>. A{" "}
+          <span style={blueSpan}>journey</span>.
+        </h4>
+      ),
+      button: true,
+      buttonText: "About Jon",
+      to: "/about",
+    },
+    about: {
+      title: (
+        <h1>
+          All <span style={purpleSpan}>About </span>Jcodes
+        </h1>
+      ),
+      subtitle: (
+        <h4>
+          The story of <span style={blueSpan}>Jon</span>. A{" "}
+          <span style={blueSpan}>developer</span>.
+        </h4>
+      ),
+      button: true,
+      buttonText: "Back To Homepage",
+      to: "/",
+    },
+    notFound: {
+      title: (
+        <h1>
+          404 Page Not <span style={purpleSpan}>Found!</span>
+        </h1>
+      ),
+      subtitle: (
+        <h4>
+          Here there be <span style={blueSpan}>dragons</span>. Best go{" "}
+          <span style={blueSpan}>back</span>.
+        </h4>
+      ),
+      button: true,
+      buttonText: "Back to Safety",
+      to: "/",
+    },
+  };
   return (
     <>
       <Header />
       <LandingHero
-        title={title}
-        subtitle={subtitle}
-        button={true}
-        buttonText="About Jon"
-        to="/about"
+        title={detailsObject[page]["title"]}
+        subtitle={detailsObject[page]["subtitle"]}
+        button={detailsObject[page]["button"]}
+        buttonText={detailsObject[page]["buttonText"]}
+        to={detailsObject[page]["to"]}
       />
-      <LayoutWrapper>
+      <LayoutWrapper bg={bg}>
         <main>{children}</main>
       </LayoutWrapper>
       <Footer />

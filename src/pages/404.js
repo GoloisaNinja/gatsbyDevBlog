@@ -1,11 +1,18 @@
-import React from "react"
-import { Layout } from "../components/Layout"
+import React from "react";
+import { Layout } from "../components";
+import { NotFoundHeading } from "../components";
+import Theme from "../components/Theme";
 
-const NotFoundPage = () => (
-  <Layout>
-    <h1>404: Not Found</h1>
-    <p>You just hit a route that doesn&#39;t exist... the sadness.</p>
-  </Layout>
-)
+const NotFoundPage = () => {
+  return (
+    <>
+      <Theme>
+        <Layout page={"notFound"} bg={true}>
+          <NotFoundHeading />
+        </Layout>
+      </Theme>
+    </>
+  );
+};
 
-export default NotFoundPage
+export default NotFoundPage;

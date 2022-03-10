@@ -3,7 +3,7 @@ import { Headline, Layout, ArticleCardGrid, Seo } from "components";
 
 export default function IndexPage() {
   return (
-    <Layout>
+    <Layout page={`landing`}>
       <Seo
         description={"Developer blog by an errant programmer"}
         title={"Jcodes Blog Homepage"}

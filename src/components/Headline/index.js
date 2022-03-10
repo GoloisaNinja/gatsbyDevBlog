@@ -19,8 +19,20 @@ export function Headline() {
                 I've discovered along the way. Make sure to come and join me on
                 Tech Twitter, and we should totally connect on LinkedIn also!
               </p>
-              <FaTwitter />
-              <FaLinkedinIn />
+              <a
+                href="https://twitter.com/goloisaninja"
+                alt="Twitter Page"
+                aria-label="Twitter"
+              >
+                <FaTwitter />
+              </a>
+              <a
+                href="https://www.linkedin.com/in/jonmcollins/"
+                alt="LinkedIn Page"
+                aria-label="LinkedIn"
+              >
+                <FaLinkedinIn />
+              </a>
             </div>
             <div>
               <h4>Want to see more?</h4>
@@ -31,8 +43,20 @@ export function Headline() {
                 that you can check out if you'd like to dig deeper. Go check it
                 out and let me know what you think! Let's connect on Github too!
               </p>
-              <MdWeb />
-              <FaGithubAlt />
+              <a
+                href="https://jcodes.page"
+                alt="Portfolio Page"
+                aria-label="Globe Icon Link to Jon's Portfolio Page"
+              >
+                <MdWeb />
+              </a>
+              <a
+                href="https://github.com/goloisaninja"
+                alt="Github Page"
+                aria-label="Github"
+              >
+                <FaGithubAlt />
+              </a>
             </div>
           </HeadlineGridWrapper>
         </div>

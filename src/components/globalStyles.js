@@ -16,6 +16,7 @@ export const GlobalStyle = createGlobalStyle`
     background: rgba(23, 23, 23, 1);
     color: #eee;
   }
+  
   strong{
     font-weight: bold;
   }

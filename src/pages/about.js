@@ -1,9 +1,9 @@
 import React from "react";
-import { AboutLayout, AboutHeading, AboutContent, Seo } from "components";
+import { Layout, AboutHeading, AboutContent, Seo } from "components";
 
 export default function AboutPage() {
   return (
-    <AboutLayout>
+    <Layout page="about">
       <Seo
         description={
           "All about Jon and his shortcomings...I mean accomplishments."
@@ -13,6 +13,6 @@ export default function AboutPage() {
       />
       <AboutHeading />
       <AboutContent />
-    </AboutLayout>
+    </Layout>
   );
 }

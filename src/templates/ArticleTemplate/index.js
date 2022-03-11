@@ -28,7 +28,7 @@ export const query = graphql`
 
 export default function ArticleTemplate({ data }) {
   const handleClick = () => {
-    navigate("/");
+    navigate("/all-articles");
   };
   return (
     <Theme>
@@ -43,7 +43,7 @@ export default function ArticleTemplate({ data }) {
           lang="en"
         />
         <ButtonWrapper>
-          <NewButton handleClick={handleClick} text="GO BACK" />
+          <NewButton handleClick={handleClick} text="ALL ARTICLES" />
         </ButtonWrapper>
 
         <ArticleTitleContentWrapper>

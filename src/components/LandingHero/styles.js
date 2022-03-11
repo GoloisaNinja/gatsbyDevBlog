@@ -19,14 +19,18 @@ export const HeroTextWrapper = styled.div`
   margin-left: 40px;
   margin-right: 40px;
   > h1 {
-    font-size: 65px;
+    font-size: 60px;
     font-family: "Prompt", sans-serif;
     letter-spacing: 3px;
     font-weight: 900;
     text-transform: uppercase;
+    word-break: break-word;
     //color: #00de51;
     color: ${props => props.theme.main_blue};
     @media (min-width: 375px) {
+      font-size: 75px;
+    }
+    @media (min-width: 500px) {
       font-size: 85px;
     }
     @media (min-width: 768px) {
@@ -41,6 +45,9 @@ export const HeroTextWrapper = styled.div`
     margin-left: auto;
     text-align: right;
     color: ${props => props.theme.colors.accentPurple};
+    @media (max-width: 400px) {
+      font-size: 20px;
+    }
   }
 `;
 

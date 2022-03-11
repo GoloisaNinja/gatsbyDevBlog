@@ -51,7 +51,7 @@ const Layout = ({ children, page, bg }) => {
     articles: {
       title: (
         <h1>
-          All <span style={purpleSpan}> Articles</span>
+          Hello <span style={purpleSpan}> Words</span>
         </h1>
       ),
       subtitle: (

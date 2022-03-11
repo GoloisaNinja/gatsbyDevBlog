@@ -12,4 +12,3 @@ export * from "./AboutContent";
 export * from "./Theme";
 export * from "./NewButton";
 export * from "./NotFoundHeading";
-export * from "./AllArticlesGrid";

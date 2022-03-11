@@ -10,7 +10,7 @@ export default function IndexPage() {
         lang="en"
       />
       <Headline />
-      <ArticleCardGrid />
+      <ArticleCardGrid isLanding={true} />
     </Layout>
   );
 }

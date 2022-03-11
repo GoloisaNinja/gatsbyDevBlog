@@ -9,7 +9,7 @@ import {
   WavesWrapper,
 } from "./styles";
 
-export function LandingHero({ title, subtitle, buttonText, to }) {
+export function LandingHero({ title, subtitle, button, buttonText, to }) {
   const handleClick = () => {
     navigate(to);
   };
@@ -21,11 +21,14 @@ export function LandingHero({ title, subtitle, buttonText, to }) {
           {subtitle}
         </HeroTextWrapper>
         <HeroButtonWrapper>
-          <NewButton
-            handleClick={handleClick}
-            text={buttonText}
-            color="purple"
-          />
+          {button && (
+            <NewButton
+              handleClick={handleClick}
+              text={buttonText}
+              color="purple"
+              inverse={true}
+            />
+          )}
         </HeroButtonWrapper>
         <WavesWrapper>
           <svg

@@ -37,7 +37,7 @@ export function Footer() {
       <FooterWrapper>
         <SiteLinkWrapper>
           <Link to="/">Home</Link>
-          <Link to="/">Articles</Link>
+          <Link to="/all-articles">Articles</Link>
           <Link to="/about">About</Link>
         </SiteLinkWrapper>
         <IconsWrapper>

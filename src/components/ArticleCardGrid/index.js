@@ -8,8 +8,9 @@ import {
 } from "./styles";
 import { ArticleCard } from "../ArticleCard";
 
-export function ArticleCardGrid() {
+export function ArticleCardGrid({ isLanding }) {
   const { articles } = useContext(ArticleContext);
+  const featuredArticles = articles.slice(0, 3);
   return (
     <SectionWrapper>
       <WavesWrapper>
@@ -23,24 +24,40 @@ export function ArticleCardGrid() {
         </svg>
       </WavesWrapper>
       <ArticleLead>
-        <h4>Featured Articles</h4>
+        <h4>{isLanding ? "Featured Articles" : "All Articles"}</h4>
       </ArticleLead>
       <ArticlesGridWrapper>
-        {articles.map(article => (
-          <ArticleCard
-            key={article.strapiId}
-            id={article.id}
-            title={article.title}
-            previewContent={article.preview}
-            author={article.author.username}
-            readTime={article.readTime}
-            imageFluid={article.image.localFile.childImageSharp.fluid}
-            imageAlt={
-              article.image.localFile.childImageSharp.fluid.originalName
-            }
-            createdAt={article.created_at.slice(0, 10)}
-          />
-        ))}
+        {isLanding
+          ? featuredArticles.map(article => (
+              <ArticleCard
+                key={article.strapiId}
+                id={article.id}
+                title={article.title}
+                previewContent={article.preview}
+                author={article.author.username}
+                readTime={article.readTime}
+                imageFluid={article.image.localFile.childImageSharp.fluid}
+                imageAlt={
+                  article.image.localFile.childImageSharp.fluid.originalName
+                }
+                createdAt={article.created_at.slice(0, 10)}
+              />
+            ))
+          : articles.map(article => (
+              <ArticleCard
+                key={article.strapiId}
+                id={article.id}
+                title={article.title}
+                previewContent={article.preview}
+                author={article.author.username}
+                readTime={article.readTime}
+                imageFluid={article.image.localFile.childImageSharp.fluid}
+                imageAlt={
+                  article.image.localFile.childImageSharp.fluid.originalName
+                }
+                createdAt={article.created_at.slice(0, 10)}
+              />
+            ))}
       </ArticlesGridWrapper>
     </SectionWrapper>
   );

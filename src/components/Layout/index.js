@@ -48,6 +48,22 @@ const Layout = ({ children, page, bg }) => {
       buttonText: "Back To Homepage",
       to: "/",
     },
+    articles: {
+      title: (
+        <h1>
+          All <span style={purpleSpan}> Articles</span>
+        </h1>
+      ),
+      subtitle: (
+        <h4>
+          Every <span style={blueSpan}> article</span>. Go ahead and{" "}
+          <span style={blueSpan}>binge</span>.
+        </h4>
+      ),
+      button: false,
+      buttonText: "",
+      to: "",
+    },
     notFound: {
       title: (
         <h1>

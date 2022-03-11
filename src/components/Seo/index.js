@@ -15,7 +15,7 @@ export function Seo({ description, lang, meta = [], title, articleImage }) {
     }
   `);
   const metaDescription = description || site.siteMetadata.description;
-  const ogImage = articleImage || "https://i.imgur.com/atpyVEq.png";
+  const ogImage = articleImage || "https://i.imgur.com/0vlEuqJ.png";
 
   return (
     <Helmet

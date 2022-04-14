@@ -11,6 +11,7 @@ export const WavesWrapper = styled.div`
     width: 100%;
     overflow: hidden;
     line-height: 0;
+    margin-bottom: -1px;
     > svg {
       position: relative;
       display: block;

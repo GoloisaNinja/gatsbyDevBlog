@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { graphql, navigate } from "gatsby";
 import { ArticleLayout, Seo } from "components";
 import ReactMarkdown from "react-markdown";
@@ -6,6 +6,8 @@ import Img from "gatsby-image";
 import NewButton from "../../components/NewButton";
 import Theme from "../../components/Theme";
 import { FaTwitter } from "react-icons/fa";
+import Prism from "prismjs";
+import "prismjs/themes/prism-okaidia.css";
 import {
   ArticleImageWrapper,
   ArticleTitleContentWrapper,
@@ -27,6 +29,9 @@ export const query = graphql`
 `;
 
 export default function ArticleTemplate({ data }) {
+  useEffect(() => {
+    Prism.highlightAll();
+  }, []);
   const handleClick = () => {
     navigate("/all-articles");
   };

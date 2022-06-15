@@ -96,6 +96,10 @@ export const ArticleContentWrapper = styled.div`
     text-transform: uppercase;
     word-break: break-word;
   }
+  > pre[class*="language-"] {
+    margin-top: 25px;
+    margin-bottom: 25px;
+  }
 `;
 
 export const AuthorWrapper = styled.div`

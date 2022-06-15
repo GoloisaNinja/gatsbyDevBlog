@@ -63,7 +63,7 @@ export function Footer() {
             <FaLinkedin />
           </a>
           <a
-            href="https://jcodes.page"
+            href="https://joncollins.dev"
             alt="Portfolio Page"
             aria-label="Globe Icon Link to Jon's Portfolio Page"
           >

@@ -44,7 +44,7 @@ export function Headline() {
                 out and let me know what you think! Let's connect on Github too!
               </p>
               <a
-                href="https://jcodes.page"
+                href="https://joncollins.dev"
                 alt="Portfolio Page"
                 aria-label="Globe Icon Link to Jon's Portfolio Page"
               >

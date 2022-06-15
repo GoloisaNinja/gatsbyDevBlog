@@ -60,7 +60,7 @@ export function AboutContent() {
           get in touch with me.
           <br />
           <br />
-          <a href="https://jcodes.page">Click to head there now!</a>
+          <a href="https://joncollins.dev">Click to head there now!</a>
         </p>
 
         <AboutIconWrapper>

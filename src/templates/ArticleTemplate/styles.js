@@ -77,7 +77,11 @@ export const ArticleContentWrapper = styled.div`
       margin-top: 25px;
       margin-bottom: 25px;
     }
+    a {
+      color: ${props => props.theme.colors.accentRed};
+    }
   }
+
   > blockquote {
     padding: 20px;
     font-style: italic;
@@ -86,6 +90,9 @@ export const ArticleContentWrapper = styled.div`
     margin: 20px;
     display: flex;
     justify-content: center;
+    a {
+      color: ${props => props.theme.colors.accentRed};
+    }
   }
   > h3 {
     font-family: "Prompt", sans-serif;

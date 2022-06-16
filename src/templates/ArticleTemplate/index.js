@@ -32,6 +32,8 @@ export default function ArticleTemplate({ data }) {
   useEffect(() => {
     Prism.highlightAll();
   }, []);
+  const regex = new RegExp(/\s/gm);
+  const articleTitle = data.strapiArticle.title.replace(regex, "_");
   const handleClick = () => {
     navigate("/all-articles");
   };
@@ -41,6 +43,7 @@ export default function ArticleTemplate({ data }) {
         <Seo
           description={data.strapiArticle.id}
           title={data.strapiArticle.title}
+          pageUrl={`https://jcodes.blog/articles/${articleTitle}`}
           articleImage={
             `https://jcodes.blog` +
             data.strapiArticle.image.localFile.childImageSharp.fluid.srcWebp

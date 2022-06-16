@@ -2,7 +2,14 @@ import React from "react";
 import { Helmet } from "react-helmet";
 import { useStaticQuery, graphql } from "gatsby";
 
-export function Seo({ description, lang, meta = [], title, articleImage }) {
+export function Seo({
+  description,
+  lang,
+  meta = [],
+  title,
+  articleImage,
+  pageUrl,
+}) {
   const { site } = useStaticQuery(graphql`
     query {
       site {
@@ -16,6 +23,7 @@ export function Seo({ description, lang, meta = [], title, articleImage }) {
   `);
   const metaDescription = description || site.siteMetadata.description;
   const ogImage = articleImage || "https://i.imgur.com/0vlEuqJ.png";
+  const ogUrl = pageUrl || "https://jcodes.blog";
 
   return (
     <Helmet
@@ -43,7 +51,7 @@ export function Seo({ description, lang, meta = [], title, articleImage }) {
         },
         {
           property: `og:url`,
-          content: "https://jcodes.blog",
+          content: ogUrl,
         },
         {
           property: `og:type`,

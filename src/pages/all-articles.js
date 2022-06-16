@@ -11,6 +11,7 @@ export default function AllArticles() {
             description={
               "Find all the articles on Jon Collins Dev Blog. Let the binging begin!"
             }
+            pageUrl={`https://jcodes.blog/all-articles`}
             title={"Jon Collins Dev Blog All Articles Page"}
             lang="en"
           />

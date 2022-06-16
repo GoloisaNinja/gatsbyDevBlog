@@ -8,6 +8,7 @@ export default function AboutPage() {
         description={
           "All about Jon and his shortcomings...I mean accomplishments."
         }
+        pageUrl={`https://jcodes.blog/about`}
         title={"About Jcodes"}
         lang="en"
       />

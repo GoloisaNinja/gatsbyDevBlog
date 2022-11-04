@@ -32,6 +32,12 @@ export function Seo({
       }}
       title={title}
       titleTemplate={`%s | ${site.siteMetadata.title}`}
+      link={[
+        {
+          href: "https://mstdn.social/@joncollinsdev",
+          rel: "me",
+        },
+      ]}
       meta={[
         {
           name: `description`,

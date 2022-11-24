@@ -34,7 +34,7 @@ export function Seo({
       titleTemplate={`%s | ${site.siteMetadata.title}`}
       link={[
         {
-          href: "https://mstdn.social/@joncollinsdev",
+          href: "https://hachyderm.io/@joncollinsdev",
           rel: "me",
         },
       ]}

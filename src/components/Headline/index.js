@@ -1,6 +1,6 @@
 import React from "react";
 import Theme from "../Theme";
-import { FaTwitter, FaLinkedinIn, FaGithubAlt } from "react-icons/fa";
+import { FaMastodon, FaLinkedinIn, FaGithubAlt } from "react-icons/fa";
 import { MdWeb } from "react-icons/md";
 import { HeadlineWrapper, HeadlineGridWrapper } from "./styles";
 
@@ -20,11 +20,11 @@ export function Headline() {
                 Tech Twitter, and we should totally connect on LinkedIn also!
               </p>
               <a
-                href="https://twitter.com/goloisaninja"
-                alt="Twitter Page"
-                aria-label="Twitter"
+                href="https://hachyderm.io/@joncollinsdev"
+                alt="Jon's Mastodon Profile"
+                aria-label="Mastodon"
               >
-                <FaTwitter />
+                <FaMastodon />
               </a>
               <a
                 href="https://www.linkedin.com/in/jonmcollins/"

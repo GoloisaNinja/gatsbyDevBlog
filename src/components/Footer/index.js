@@ -9,7 +9,7 @@ import {
   Copyright,
 } from "./styles";
 import {
-  FaTwitter,
+  FaMastodon,
   FaGlobe,
   FaRedditAlien,
   FaLinkedin,
@@ -42,11 +42,11 @@ export function Footer() {
         </SiteLinkWrapper>
         <IconsWrapper>
           <a
-            href="https://twitter.com/goloisaninja"
-            alt="Twitter Page"
-            aria-label="Twitter"
+            href="https://hachyderm.io/@joncollinsdev"
+            alt="Jon's Mastodon Profile"
+            aria-label="Mastodon"
           >
-            <FaTwitter />
+            <FaMastodon />
           </a>
           <a
             href="https://www.reddit.com/user/GoloisaNinja"

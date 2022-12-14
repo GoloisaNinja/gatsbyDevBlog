@@ -17,7 +17,7 @@ export function Headline() {
                 blog topics. Everything from opinion pieces to hardware tech
                 reviews, to some of the project related tips and tricks that
                 I've discovered along the way. Make sure to come and join me on
-                Tech Twitter, and we should totally connect on LinkedIn also!
+                Mastodon, and we should totally connect on LinkedIn also!
               </p>
               <a
                 href="https://hachyderm.io/@joncollinsdev"

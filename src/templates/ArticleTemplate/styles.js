@@ -153,3 +153,12 @@ export const ByLineTwitterWrapper = styled.div`
     }
   }
 `;
+export const GalleryGrid = styled.div`
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 15px;
+  margin-top: 50px;
+`;
+export const Thumbnail = styled.img`
+  width: 100%;
+`;

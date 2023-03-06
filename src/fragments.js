@@ -8,6 +8,8 @@ export const articleFields = graphql`
     readTime
     preview
     id
+    hasGallery
+    galleryURLS
     author {
       username
       avatar {

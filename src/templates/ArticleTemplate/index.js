@@ -1,11 +1,11 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState, useCallback } from "react";
 import { graphql, navigate } from "gatsby";
 import { ArticleLayout, Seo } from "components";
 import ReactMarkdown from "react-markdown";
 import Img from "gatsby-image";
 import NewButton from "../../components/NewButton";
 import Theme from "../../components/Theme";
-import { FaTwitter } from "react-icons/fa";
+import { FaMastodon } from "react-icons/fa";
 import Prism from "prismjs";
 import "prismjs/themes/prism-okaidia.css";
 import {
@@ -17,6 +17,8 @@ import {
   AuthorAvatarWrapper,
   ByLineTwitterWrapper,
   ButtonWrapper,
+  GalleryGrid,
+  Thumbnail,
 } from "./styles";
 import BackgroundImage from "gatsby-background-image";
 
@@ -29,9 +31,16 @@ export const query = graphql`
 `;
 
 export default function ArticleTemplate({ data }) {
+  const [imgUrls, setImgUrls] = useState([]);
+  const buildURLStringArray = useCallback(() => {
+    setImgUrls(data.strapiArticle.galleryURLS.split(";"));
+  }, [data.strapiArticle.galleryURLS]);
   useEffect(() => {
     Prism.highlightAll();
-  }, []);
+    if (data.strapiArticle.hasGallery) {
+      buildURLStringArray();
+    }
+  }, [buildURLStringArray, data.strapiArticle.hasGallery]);
   const regex = new RegExp(/\s/gm);
   const articleTitle = data.strapiArticle.title.replace(regex, "_");
   const handleClick = () => {
@@ -70,16 +79,15 @@ export default function ArticleTemplate({ data }) {
               BY {data.strapiArticle.author.username}
               <div>
                 <a
-                  href="https://twitter.com/GoloisaNinja"
-                  alt="Jon's Twitter Page"
+                  href="https://hachyderm.io/@joncollinsdev"
+                  alt="Follow Jon on Hachyderm.io"
                 >
-                  <FaTwitter />
+                  <FaMastodon />
                 </a>
               </div>
             </ByLineTwitterWrapper>
           </AuthorWrapper>
         </ArticleTitleContentWrapper>
-
         <ArticleImageWrapper>
           <BackgroundImage
             fluid={data.strapiArticle.image.localFile.childImageSharp.fluid}
@@ -91,6 +99,24 @@ export default function ArticleTemplate({ data }) {
         </ArticleImageWrapper>
         <ArticleContentWrapper>
           <ReactMarkdown children={data.strapiArticle.content} />
+          {imgUrls.length > 0 && (
+            <>
+              <h3>More Images</h3>
+              <GalleryGrid>
+                {imgUrls.map((url, index) => (
+                  <a
+                    href={url}
+                    target="_blank"
+                    rel="noreferrer"
+                    aria-label="click to see the full size image"
+                    key={index}
+                  >
+                    <Thumbnail src={url} />
+                  </a>
+                ))}
+              </GalleryGrid>
+            </>
+          )}
         </ArticleContentWrapper>
       </ArticleLayout>
     </Theme>

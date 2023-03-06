@@ -161,4 +161,6 @@ export const GalleryGrid = styled.div`
 `;
 export const Thumbnail = styled.img`
   width: 100%;
+  aspect-ratio: 4/3;
+  object-fit: cover;
 `;

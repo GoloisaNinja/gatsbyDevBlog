@@ -50,7 +50,7 @@ export default function ArticleTemplate({ data }) {
     <Theme>
       <ArticleLayout>
         <Seo
-          description={data.strapiArticle.id}
+          description={data.strapiArticle.preview}
           title={data.strapiArticle.title}
           pageUrl={`https://jcodes.blog/articles/${articleTitle}`}
           articleImage={

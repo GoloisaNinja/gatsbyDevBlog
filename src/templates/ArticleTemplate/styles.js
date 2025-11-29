@@ -77,6 +77,9 @@ export const ArticleContentWrapper = styled.div`
       margin-top: 25px;
       margin-bottom: 25px;
     }
+    em {
+      font-style: italic;
+    }
     a {
       color: ${props => props.theme.colors.accentRed};
     }
@@ -85,11 +88,13 @@ export const ArticleContentWrapper = styled.div`
   > blockquote {
     padding: 20px;
     font-style: italic;
-    font-size: 25px;
+    font-size: 22px;
     color: ${props => props.theme.colors.accentPurple};
-    margin: 20px;
+    margin: 50px 20px;
     display: flex;
     justify-content: center;
+    border-left: 5px solid lightgrey;
+    background-color: #1b1b1b;
     a {
       color: ${props => props.theme.colors.accentRed};
     }
@@ -102,10 +107,21 @@ export const ArticleContentWrapper = styled.div`
     padding-bottom: 15px;
     text-transform: uppercase;
     word-break: break-word;
+    margin-top: 60px;
   }
   > pre[class*="language-"] {
     margin-top: 25px;
     margin-bottom: 25px;
+  }
+  @media (max-width: 500px) {
+    blockquote {
+      padding: 10px;
+      font-size: 20px;
+      margin: 50px 10px;
+    }
+  }
+  @media (min-width: 900px) {
+    margin: 50px 40px 125px 40px;
   }
 `;
 

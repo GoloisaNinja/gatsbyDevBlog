@@ -10,7 +10,7 @@ import { ArticleCard } from "../ArticleCard";
 
 export function ArticleCardGrid({ isLanding }) {
   const { articles } = useContext(ArticleContext);
-  const featuredArticles = articles.slice(0, 3);
+  const featuredArticles = articles.filter(article => article.isFeatured);
   return (
     <SectionWrapper>
       <WavesWrapper>

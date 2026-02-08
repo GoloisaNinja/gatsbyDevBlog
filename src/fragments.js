@@ -10,6 +10,7 @@ export const articleFields = graphql`
     id
     hasGallery
     galleryURLS
+    isFeatured
     author {
       username
       avatar {

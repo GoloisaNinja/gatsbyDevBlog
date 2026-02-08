@@ -19,7 +19,7 @@ const Layout = ({ children, page, bg }) => {
     landing: {
       title: (
         <h1>
-          The Jcodes <span style={purpleSpan}>Dev </span>Blog
+          Jcodes <span style={purpleSpan}>Dev </span>Blog
         </h1>
       ),
       subtitle: (

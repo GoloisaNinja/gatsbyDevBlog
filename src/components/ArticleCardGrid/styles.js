@@ -30,8 +30,11 @@ export const ArticlesGridWrapper = styled.div`
   @media (min-width: 600px) {
     grid-template-columns: 1fr 1fr;
   }
-  @media (min-width: 1000px) {
+  @media (min-width: 800px) {
     grid-template-columns: 1fr 1fr 1fr;
+  }
+  @media (min-width: 1000px) {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
   }
 `;
 export const ArticleLead = styled.div`

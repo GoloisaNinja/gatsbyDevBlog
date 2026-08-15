@@ -32,6 +32,7 @@ export const query = graphql`
 
 export default function ArticleTemplate({ data }) {
   const [imgUrls, setImgUrls] = useState([]);
+  console.log(data);
   const buildURLStringArray = useCallback(() => {
     setImgUrls(data.strapiArticle.galleryURLS.split(";"));
   }, [data.strapiArticle.galleryURLS]);

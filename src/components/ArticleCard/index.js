@@ -6,6 +6,7 @@ import Theme from "../Theme";
 import {
   ArticleCardWrapper,
   Title,
+  Badges,
   Preview,
   Author,
   CreatedAt,
@@ -17,6 +18,7 @@ export function ArticleCard({
   title,
   previewContent,
   author,
+  badges,
   readTime,
   imageFluid,
   imageAlt,
@@ -39,6 +41,11 @@ export function ArticleCard({
         </div>
         <div>
           <Title>{title}</Title>
+          <Badges>
+            {badges.map((badge, index) => (
+              <div key={badge.id}>{badge.name}</div>
+            ))}
+          </Badges>
           <Author>
             by {author}
             <div>{readTime}</div>

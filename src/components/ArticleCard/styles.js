@@ -30,7 +30,23 @@ export const Title = styled.div`
   color: ${props => props.theme.colors.mainBlue};
   font-weight: 400;
   font-size: 25px;
+  margin-bottom: 10px;
+`;
+export const Badges = styled.div`
+  display: flex;
   margin-bottom: 20px;
+  > div {
+    white-space: nowrap;
+    font-size: 10px;
+    text-transform: none;
+    font-style: normal;
+    margin-right: 10px;
+    background: ${props => props.theme.colors.accentPink};
+    border-radius: 10px;
+    padding: 5px 10px;
+    color: #fff;
+    font-weight: bold;
+  }
 `;
 
 export const Preview = styled.div`

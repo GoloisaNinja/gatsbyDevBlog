@@ -23,6 +23,10 @@ export const articleFields = graphql`
         }
       }
     }
+    badges {
+      id
+      name
+    }
     created_at
     image {
       localFile {

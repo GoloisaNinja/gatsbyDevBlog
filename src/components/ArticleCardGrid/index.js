@@ -1,4 +1,6 @@
 import React, { useContext, useState, useEffect, useCallback } from "react";
+import { useStaticQuery, graphql } from "gatsby";
+import Img from "gatsby-image";
 import ArticleContext from "../../context/ArticleContext";
 import { Modal } from "../Modal";
 import { FaFilter } from "react-icons/fa";
@@ -8,10 +10,23 @@ import {
   ArticlesGridWrapper,
   ArticleLead,
   ArticleSearch,
+  NoArticles,
+  FloatingText,
 } from "./styles";
 import { ArticleCard } from "../ArticleCard";
 
 export function ArticleCardGrid({ isLanding }) {
+  const data = useStaticQuery(graphql`
+    {
+      file(relativePath: { eq: "noarticles.png" }) {
+        childImageSharp {
+          fluid(maxWidth: 600) {
+            ...GatsbyImageSharpFluid_withWebp
+          }
+        }
+      }
+    }
+  `);
   const { articles } = useContext(ArticleContext);
   const [search, setSearch] = useState("");
   const [show, setShow] = useState(false);
@@ -70,18 +85,28 @@ export function ArticleCardGrid({ isLanding }) {
         <h4>{isLanding ? "Featured Articles" : "All Articles"}</h4>
       </ArticleLead>
       {!isLanding && (
-        <ArticleSearch>
-          <input
-            type="text"
-            aria-label="Search Articles"
-            placeholder="Search Articles..."
-            value={search}
-            onChange={e => setSearch(e.target.value)}
-          />
-          <button onClick={() => setShow(true)}>
-            <FaFilter />
-          </button>
-        </ArticleSearch>
+        <>
+          <ArticleSearch>
+            <input
+              type="text"
+              aria-label="Search Articles"
+              placeholder="Search Articles..."
+              value={search}
+              onChange={e => setSearch(e.target.value)}
+            />
+            <button onClick={() => setShow(true)}>
+              <FaFilter />
+            </button>
+          </ArticleSearch>
+          {filteredArticles.length < 1 && (
+            <NoArticles>
+              <Img fluid={data.file.childImageSharp.fluid} />
+              <FloatingText>
+                <h2>No matching articles found...</h2>
+              </FloatingText>
+            </NoArticles>
+          )}
+        </>
       )}
 
       <ArticlesGridWrapper>

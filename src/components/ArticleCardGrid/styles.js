@@ -43,7 +43,7 @@ export const ArticleLead = styled.div`
   font-weight: bold;
   color: #303030;
   padding-top: 70px;
-  padding-left: 40px;
+  padding-left: 15px;
   > h4 {
     margin-top: 0;
   }
@@ -68,5 +68,20 @@ export const ArticleSearch = styled.div`
     color: ${props => props.theme.colors.accentPurple};
     padding: 15px;
     cursor: pointer;
+  }
+`;
+export const NoArticles = styled.div`
+  position: relative;
+  margin: 0px 15px;
+`;
+export const FloatingText = styled.div`
+  position: absolute;
+  top: 40px;
+  left: 20px;
+  > h2 {
+    font-family: "Prompt", sans-serif;
+    font-weight: 700;
+    color: white;
+    text-shadow: 1px 1px 2px black;
   }
 `;

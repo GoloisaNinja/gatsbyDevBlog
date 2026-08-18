@@ -33,7 +33,7 @@ export function AboutContent() {
         <p>
           I love to build things. Useful things, and not-so-useful things. I
           like building amazing things for amazing people and amazing companies.
-          I've been programming with JavaScript since 2017 when I set out to
+          I've been programming with JavaScript since 2014 when I set out to
           become a Full Stack Developer.
           <br />
           <br />I made a career change from finance to the tech sector, because
@@ -43,7 +43,7 @@ export function AboutContent() {
           various tools to bootstrap a project quickly and then scale it for
           larger datasets, users, etc. After making smaller static projects, I
           really wanted to tackle applications that would, in my mind, be far
-          more interactive, fun, progressive, and dynmaic.
+          more interactive, fun, progressive, and dynamic.
           <br />
           <br />
           That's when I started learning backend technologies like NodeJS,

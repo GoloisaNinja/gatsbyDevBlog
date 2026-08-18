@@ -95,7 +95,9 @@ export function ArticleCardGrid({ isLanding }) {
               onChange={e => setSearch(e.target.value)}
             />
             <button onClick={() => setShow(true)}>
-              <FaFilter />
+              <span title="Filter Articles by Tags">
+                <FaFilter />
+              </span>
             </button>
           </ArticleSearch>
           {filteredArticles.length < 1 && (

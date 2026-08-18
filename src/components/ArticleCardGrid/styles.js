@@ -60,6 +60,9 @@ export const ArticleSearch = styled.div`
     border: none;
     outline: none;
     flex: 1;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    max-height: 48px;
   }
   > button {
     border-radius: 0px;
@@ -68,6 +71,9 @@ export const ArticleSearch = styled.div`
     color: ${props => props.theme.colors.accentPurple};
     padding: 15px;
     cursor: pointer;
+    max-height: 48px;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
   }
 `;
 export const NoArticles = styled.div`

@@ -24,10 +24,20 @@ export function AboutHeading() {
             <h4>Hello there</h4>
             <p>
               {" "}
-              I'm Jon, and I'm a Full Stack Developer. My path to becoming a
+              I'm Jon, and I'm a Software Developer. My path to becoming a
               developer wasn't exactly smooth, but then, I think that is true
-              for so many developers and would-be developers! Keep reading and
-              I'll tell you a little more about myself and my journey thus far!
+              for so many developers and would-be developers. The landscape of
+              software, development, and IT have changed drastically in the last
+              few years. As with anything, some of this change is good, and some
+              of this change is bad.
+            </p>
+            <br />
+            <p>
+              I'll largely try and keep it pretty light around here. I enjoy
+              writing articles about topics that I find useful or engaging.
+              You're just as likely to find a video game review as you are an
+              article about some new programming revelation I've come to. Oh,
+              and keyboards...yeah we're going to talk about keyboards.
             </p>
           </div>
           <Img fluid={data.file.childImageSharp.fluid} />

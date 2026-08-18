@@ -10,5 +10,6 @@ const bgStyle = ({ bg }) => {
 
 export const LayoutWrapper = styled.div`
   min-height: 100vh;
+  margin-top: -1px;
   ${bgStyle};
 `;

@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const HeadlineWrapper = styled.div`
-  margin: 0 auto;
+  margin: -1px;
   text-align: center;
   background-color: ${props => props.theme.colors.mainBlue};
   > div {

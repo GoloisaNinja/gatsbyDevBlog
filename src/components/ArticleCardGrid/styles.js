@@ -52,6 +52,7 @@ export const ArticleSearch = styled.div`
   display: flex;
   margin: 0px 15px 25px 15px;
   align-items: center;
+  height: 50px;
   > input {
     width: 100%;
     background-color: rgba(23, 23, 23, 1);
@@ -62,23 +63,31 @@ export const ArticleSearch = styled.div`
     flex: 1;
     border-top-left-radius: 5px;
     border-bottom-left-radius: 5px;
-    max-height: 48px;
+    height: 100%;
+    box-sizing: border-box;
   }
   > button {
-    border: none;
+    display: inline-flex;
     border-radius: 0px;
+    align-items: center;
+    justify-content: center;
     background-color: rgba(23, 23, 23, 1);
-    border: none;
     color: ${props => props.theme.colors.accentPurple};
-    padding: 15px;
+    padding: 0 12px;
     cursor: pointer;
-    max-height: 48px;
+    height: 100%;
     border-top-right-radius: 5px;
     border-bottom-right-radius: 5px;
+    margin: 0;
+    border: none;
+    -webkit-appearance: none;
+    appearance: none;
     > span {
-      margin: 0;
-      padding: 0;
-      line-height: 1;
+      > svg {
+        height: 1.25em;
+        width: 1.25em;
+        display: block;
+      }
     }
   }
 `;

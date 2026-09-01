@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { FaTimesCircle } from "react-icons/fa";
+import { FaTimes } from "react-icons/fa";
 import { Checkbox } from "../Checkbox";
 import { ModalStyle, ButtonDiv, ModalButton2, ModalOverlay } from "./styles";
 
@@ -23,7 +23,7 @@ export function Modal({
       <>
         <ModalStyle>
           <div>
-            <FaTimesCircle onClick={e => handleClose(true)} />
+            <FaTimes onClick={e => handleClose(true)} />
           </div>
           <div>
             <p style={{ marginBottom: "2rem" }}>{content.title}</p>

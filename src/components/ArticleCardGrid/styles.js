@@ -65,6 +65,7 @@ export const ArticleSearch = styled.div`
     max-height: 48px;
   }
   > button {
+    border: none;
     border-radius: 0px;
     background-color: rgba(23, 23, 23, 1);
     border: none;
@@ -74,6 +75,11 @@ export const ArticleSearch = styled.div`
     max-height: 48px;
     border-top-right-radius: 5px;
     border-bottom-right-radius: 5px;
+    > span {
+      margin: 0;
+      padding: 0;
+      line-height: 1;
+    }
   }
 `;
 export const NoArticles = styled.div`
